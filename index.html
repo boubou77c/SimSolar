@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>SimSolar</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="container">
+      <!-- Planets list-->
+      <div class="planet-list">
+        <h3>Planets</h3>
+        <ul id="planetList">
+          <li data-planet="Mercury">Mercury</li>
+          <li data-planet="Venus">Venus</li>
+          <li data-planet="Earth">Earth</li>
+          <li data-planet="Mars">Mars</li>
+          <li data-planet="Jupiter">Jupiter</li>
+          <li data-planet="Saturn">Saturn</li>
+          <li data-planet="Uranus">Uranus</li>
+          <li data-planet="Neptune">Neptune</li>
+        </ul>
+        <button id="infoButton">?</button>
+
+        <!-- Modal Information -->
+        <div id="infoModal" class="modal">
+          <div class="modal-content">
+            <span class="close"></span>
+            <h2>How to navigate in the Universe</h2>
+            <p>
+              <strong>Zooming:</strong> Use the zoom buttons to zoom in and out
+              of the solar system.
+            </p>
+            <p>
+              <strong>Moving the View:</strong> Use right-click + drag to move
+              the canvas and explore the solar system.
+            </p>
+            <p>
+              <strong>Speed:</strong> Use the speed slider to adjust the speed
+              at which the planets orbit the Sun. The faster the speed, the
+              quicker the planets move.
+            </p>
+            <ul>
+              <li>Code by: Boubou</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <!-- Information about planet -->
+      <div class="info-panel">
+        <h2>Informations</h2>
+        <p id="planetInfo">Click on a planet to display informations about.</p>
+        
+      </div>
+
+      <!--  Canvas  -->
+      <canvas id="solarCanvas"></canvas>
+
+      <!-- Controls -->
+      <div class="controls">
+        <h2>Controls</h2>
+        <label id="sliderValueLabel">Speed : 0.2</label>
+
+        <input
+          id="sliderSpeed"
+          type="range"
+          min="0"
+          max="2"
+          step="0.1"
+          value="0.2"/>
+
+        <div class="button-container">
+          <div class="top-row">
+            <button id="zoomIn">Zoom +</button>
+            <button id="zoomOut">Zoom -</button>
+          </div>
+          <div class="bottom-row">
+            <button id="resetPos">Reset Zoom</button>
+            <button id="PlayStopSim">Play</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>
